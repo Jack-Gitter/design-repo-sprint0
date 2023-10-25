@@ -5,12 +5,13 @@ import PlayerArtworkDAOInterface from './PlayerArtworkDAO'
 // use this in order to give and remove paintings from users after auction
  export default interface AuctionFloor {
 
+		 //dao: dao
 		 id: number
 		 artBeingAuctioned: Artwork
 		 timeLeft: number
 		 currentBid: {player: Player, bid: number}
 		 auctioneer: Player | null
-		 occupants: Player[] 
+		 observers: Player[] 
 		 bidders: Player[]
 
 		 givePaintingToPlayer(): void;
